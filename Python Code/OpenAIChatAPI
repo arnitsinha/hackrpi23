@@ -1,7 +1,8 @@
+import os
 import openai
 
 # Replace with your OpenAI API key
-api_key = "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"
+api_key = os.getenv("OPENAI_API_KEY")
 
 def chat_with_gpt(input_text):
     response = openai.Completion.create(
@@ -14,8 +15,36 @@ def chat_with_gpt(input_text):
     return response.choices[0].text.strip()
 
 if __name__ == "__main__":
-    user_input = input("Enter Question: ")
-    
-    while user_input.lower() not in ("exit", "quit"):
-        response = chat_with_gpt(user_input)
-        print(response)
+    learn = input("What do you want to learn? ")
+    level = input("What is your level? ")
+    days = input("How many days do you want to learn this skill in? ")
+    print()
+    user_input = "Make me a " + days + " day schedule for learning " + learn + " for " + level + " Do not combine 2 days together. Give me just the days and the title together and then the task (Only One Task a Day.) to be performed that day as a single sentence. Precede day with a # and the tasks with a *. Give me just a txt file as output."
+    response = chat_with_gpt(user_input)
+
+# Initialize empty arrays for titles and tasks
+titles = []
+tasks = []
+
+# Your text data
+schedule_text = response
+
+# Split the text into lines
+lines = schedule_text.split('\n')
+
+# Iterate through the lines and extract titles and tasks
+for line in lines:
+    line = line.strip()
+    if line.startswith('#'):
+        titles.append(line)
+    elif line.startswith('*'):
+        tasks.append(line)
+
+# Print the extracted titles and tasks
+print("Titles:")
+for title in titles:
+    print(title)
+
+print("\nTasks:")
+for task in tasks:
+    print(task)
