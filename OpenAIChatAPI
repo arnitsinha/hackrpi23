@@ -1,0 +1,21 @@
+import openai
+
+# Replace with your OpenAI API key
+api_key = "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"
+
+def chat_with_gpt(input_text):
+    response = openai.Completion.create(
+        engine="gpt-3.5-turbo-instruct",  # You can use a different engine if needed
+        prompt=input_text,
+        max_tokens=50,  # Adjust this as per your desired response length
+        api_key=api_key
+    )
+
+    return response.choices[0].text.strip()
+
+if __name__ == "__main__":
+    user_input = input("Enter Question: ")
+    
+    while user_input.lower() not in ("exit", "quit"):
+        response = chat_with_gpt(user_input)
+        print(response)
