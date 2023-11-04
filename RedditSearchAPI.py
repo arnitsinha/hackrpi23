@@ -35,5 +35,3 @@ def search_reddit(question):
 if __name__ == "__main__":
     user_question = input("Enter a question to search on Reddit: ")
     search_reddit(user_question)
-
-
