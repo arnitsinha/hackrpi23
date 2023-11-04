@@ -75,7 +75,7 @@ if __name__ == "__main__":
     days = input("How many days do you want to learn this skill in? (Use this format: 3): ")
     timezone = input("What is your timezone? (Use this format: EST, PST, etc.): ")
     print()
-    user_input = "Make me a " + days + " day schedule for learning " + learn + " for " + level + " Do not combine 2 days together. Give me just the days and the title together and then the task (Only One Task a Day.) to be performed that day as a single sentence. Precede day with a # and the tasks with a *. Give me just a txt file as output."
+    user_input = "Make me a " + days + " day schedule for learning " + learn + " for " + level + " Do not combine 2 days together. Give me just the days and the title together and then the task (Only One Task a Day.) to be performed that day as a single sentence. Also, include helpful urls on the task sentence. Precede day with a # and the tasks with a *. Give me just a txt file as output."
     response = chat_with_gpt(user_input)
 
     # Initialize empty arrays for titles and tasks
