@@ -1,5 +1,6 @@
 import os
 import openai
+from rpikeys.settings import set_openai_key, set_google_calendar_credentials
 from datetime import datetime, timedelta
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -8,8 +9,9 @@ from PyQt6.QtGui import QDesktopServices
 from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QLabel, QLineEdit, QPushButton
 import threading
 
+
 # Replace with your OpenAI API key
-api_key = os.environ.get('OPENAI_API_KEY')
+api_key = set_openai_key()
 
 def chat_with_gpt(input_text):
     response = openai.Completion.create(
@@ -92,7 +94,7 @@ class ScheduleApp(QMainWindow):
         layout.addWidget(QLabel("What is your timezone? (Use this format: EST, PST, etc.): "))
         layout.addWidget(self.timezone_input)
 
-        self.schedule_button = QPushButton("Create Schedule", self)
+        self.schedule_button = QPushButton("Import Schedule File", self)
         self.schedule_button.clicked.connect(self.create_schedule)
 
         layout.addWidget(self.schedule_button)
@@ -112,7 +114,7 @@ class ScheduleApp(QMainWindow):
         level = self.level_input.text()
         days = self.days_input.text()
         timezone = self.timezone_input.text()
-        credentials = service_account.Credentials.from_service_account_file('C:\\Users\\Vansh\\Desktop\\Github\\HACKRPI23\\Python Code\\hackrpi-backup.json')
+        credentials = service_account.Credentials.from_service_account_file(set_google_calendar_credentials())
 
 
         user_input = f"Make me a {days} day schedule for learning {learn} for {level}. Do not combine 2 days together. Give me just the days and the title together and then the task (Only One Task a Day.) to be performed that day as a single sentence. Also, include helpful URLs in the task sentence. Precede day with a # and the tasks with a *."
