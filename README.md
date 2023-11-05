@@ -1,9 +1,67 @@
-# HACKRPI23
-Project for HACKRPI23
+# Personalized Learning Schedule Generator
 
-### Setup
-1. Clone the repo
-   bash<br>git clone https://github.com/vanshb03/HACKRPI23<br>
-2. Install project dependencies:
-   `pip install -r requirements.txt --user`
-3. 
+This project is a personalized learning schedule generator that utilizes OpenAI's GPT-3 to create a custom learning schedule for a specific learning goal, skill level, and duration. It also integrates with Google Calendar to automatically create and share a public calendar with the generated schedule.
+
+## Table of Contents
+- [Features](#features)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [License](#license)
+
+## Features
+
+- Generate personalized learning schedules for specific learning goals.
+- Consider skill level and the number of days for the schedule.
+- Create daily tasks with detailed explanations and provide URLs for each task.
+- Automatically generate Google Calendar events for the schedule.
+- Share a public Google Calendar with the generated schedule.
+
+## Demo
+
+A live demo of this project is available at [Demo Link](https://your-demo-link.com).
+
+## Getting Started
+
+To run this project locally or deploy it on your server, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/your-repo.git
+   cd your-repo
+
+2. Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+
+3. Set up your environment variables:
+
+   Obtain an OpenAI API key and set it as an environment variable OPENAI_API_KEY.
+   Provide the path to your Google Calendar API credentials JSON file as an environment variable GOOGLE_CALENDAR_CREDENTIALS.
+
+4. Run the Flask application:
+
+   ```bash
+   python app.py
+
+5. Access the application in your web browser at http://localhost:5000.
+
+## Usage
+Fill out the input form on the application's homepage with the following details:
+
+Learning goal (e.g., "Python programming").
+Skill level (e.g., "Intermediate").
+Number of days for the learning schedule.
+Your timezone.
+Click the "Generate Schedule" button.
+
+The application will use GPT-3 to generate a personalized learning schedule based on your input.
+
+Google Calendar events will be automatically created in a shared public calendar.
+
+You will receive a link to the shared calendar to access your generated schedule.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
