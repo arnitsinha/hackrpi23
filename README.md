@@ -19,9 +19,11 @@ This project is a personalized learning schedule generator that utilizes OpenAI'
 
 ## Demo
 
-A live demo of this project is available at [Demo Link](https://your-demo-link.com).
+A live demo of this project is available at [Demo Link](https://arnitsinha.pythonanywhere.com).
 
 ## Getting Started
+
+### Web Server
 
 To run this project locally or deploy it on your server, follow these steps:
 
@@ -47,6 +49,19 @@ To run this project locally or deploy it on your server, follow these steps:
    python app.py
 
 5. Access the application in your web browser at http://localhost:5000.
+
+### GUI
+
+In addition to the command-line version, we also offer a user-friendly Graphical User Interface (GUI) for creating personalized learning schedules. The GUI version makes it even easier to generate schedules and manage your calendar events.
+
+To access the GUI version:
+
+1. Clone the repository to your local machine.
+2. Install the required dependencies mentioned in the command-line version.
+3. Run the following Python script to launch the GUI application:
+
+   ```bash
+   python gui.py
 
 ## Usage
 Fill out the input form on the application's homepage with the following details:
