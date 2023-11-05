@@ -57,7 +57,10 @@ In addition to the command-line version, we also offer a user-friendly Graphical
 To access the GUI version:
 
 1. Download the CodeGUI.exe file.
-2. Run it and enjoy!
+2. Set up your environment variables:
+   Obtain an OpenAI API key and set it as an environment variable OPENAI_API_KEY.
+   Provide the path to your Google Calendar API credentials JSON file as an environment variable GOOGLE_CALENDAR_CREDENTIALS.
+3. Run it and enjoy!
 
 ## Usage
 Fill out the input form on the application's homepage with the following details:
