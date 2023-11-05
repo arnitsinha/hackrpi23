@@ -56,12 +56,8 @@ In addition to the command-line version, we also offer a user-friendly Graphical
 
 To access the GUI version:
 
-1. Clone the repository to your local machine.
-2. Install the required dependencies mentioned in the command-line version.
-3. Run the following Python script to launch the GUI application:
-
-   ```bash
-   python gui.py
+1. Download the CodeGUI.exe file.
+2. Run it and enjoy!
 
 ## Usage
 Fill out the input form on the application's homepage with the following details:
