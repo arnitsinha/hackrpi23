@@ -2,6 +2,8 @@
 
 This project is a personalized learning schedule generator that utilizes OpenAI's GPT-3 to create a custom learning schedule for a specific learning goal, skill level, and duration. It also integrates with Google Calendar to automatically create and share a public calendar with the generated schedule.
 
+![alt-text](hackrpi-demo.gif)
+
 ## Table of Contents
 - [Features](#features)
 - [Demo](#demo)
